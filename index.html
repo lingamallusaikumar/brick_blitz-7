@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brick Blitz — Premium 2D Brick Breaker Arcade</title>
+  <meta name="description" content="Commercial-quality 2D Brick Breaker Arcade Game with JavaScript ES6+, HTML5 Canvas, Web Audio API, and Python 3.10+" />
+  <link rel="stylesheet" href="./src/css/main.css" />
+</head>
+<body class="crt-overlay">
+  <div id="app-root">
+    
+    <!-- Top Arcade Header Navigation -->
+    <header class="arcade-header glassmorphism">
+      <div class="brand-logo">BRICK BLITZ</div>
+      
+      <nav class="nav-tabs-container">
+        <button class="nav-tab active" data-tab="play">PLAY</button>
+        <button class="nav-tab" data-tab="levels">LEVELS</button>
+        <button class="nav-tab" data-tab="leaderboard">LEADERBOARD</button>
+        <button class="nav-tab" data-tab="stats">STATS</button>
+        <button class="nav-tab" data-tab="shop">SHOP</button>
+        <button class="nav-tab" data-tab="profile">PROFILE</button>
+      </nav>
+    </header>
+
+    <!-- Main Arcade View Containers -->
+    <main id="main-content">
+      
+      <!-- 1. Play Tab (Canvas Game & Main Menu Options) -->
+      <section id="view-play" class="app-view">
+        <div id="main-arcade-interface" class="view-card glassmorphism text-center">
+          <h1 class="view-title neon-blue">SELECT GAME MODE</h1>
+          <p class="view-desc">Blast through 50+ levels, unleash multi-balls, and claim the high score!</p>
+
+          <div class="mode-select-grid">
+            <button id="btn-play-classic" class="arcade-btn primary">
+              <span>CLASSIC MODE</span>
+              <small>50 Progressive Levels & Lives</small>
+            </button>
+            <button id="btn-play-timeattack" class="arcade-btn secondary">
+              <span>TIME ATTACK</span>
+              <small>Ticking Clock & Speed Bonuses</small>
+            </button>
+            <button id="btn-play-endless" class="arcade-btn secondary">
+              <span>ENDLESS SURVIVAL</span>
+              <small>Descending Brick Waves</small>
+            </button>
+          </div>
+
+          <div class="settings-strip">
+            <label class="toggle-label">
+              <input type="checkbox" id="toggle-sound" checked />
+              <span>SFX & Audio Synthesizer</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="game-viewport-wrapper">
+          <div id="hud-overlay" class="hud-overlay"></div>
+          <div id="modal-container"></div>
+          <canvas id="gameCanvas" width="900" height="700"></canvas>
+        </div>
+      </section>
+
+      <!-- 2. Levels Grid Tab -->
+      <section id="view-levels" class="app-view" style="display: none;">
+        <div class="view-card glassmorphism">
+          <h2 class="view-title neon-cyan">🗺️ SELECT LEVEL (1 - 50)</h2>
+          <div id="level-select-grid" class="level-select-grid"></div>
+        </div>
+      </section>
+
+      <!-- 3. Leaderboard Tab -->
+      <section id="view-leaderboard" class="app-view" style="display: none;"></section>
+
+      <!-- 4. Statistics & Achievements Tab -->
+      <section id="view-stats" class="app-view" style="display: none;"></section>
+
+      <!-- 5. Cosmetics Shop Tab -->
+      <section id="view-shop" class="app-view" style="display: none;"></section>
+
+      <!-- 6. User Profile & Accounts Tab -->
+      <section id="view-profile" class="app-view" style="display: none;"></section>
+
+    </main>
+
+    <!-- Global Toast Container -->
+    <div id="toast-container"></div>
+
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
