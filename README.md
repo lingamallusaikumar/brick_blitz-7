@@ -2,7 +2,7 @@
 
 > A commercial-quality, responsive 2D Brick Breaker Arcade Game built with **JavaScript (ES6+), HTML5 Canvas, modern CSS3, and Python 3.10+**.
 
-![License](https://img.shields.io/badge/License-MIT-blue.svg)
+![License](https://img.shields.io/badge/License-Proprietary-red.svg)
 ![Build](https://img.shields.io/badge/Build-Passing-brightgreen.svg)
 ![Tests](https://img.shields.io/badge/Tests-5%20Suites%20Passing-success.svg)
 
@@ -157,4 +157,4 @@ The project development is structured into **5 distinct feature phases**, servin
 ---
 
 ## 📄 License
-MIT License © 2026 Antigravity Team.
+Proprietary License © 2026 Antigravity Team. All Rights Reserved.
